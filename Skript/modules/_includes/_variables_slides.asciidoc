@@ -10,7 +10,8 @@
 // make sure that the URL changes when you change slides
 :revealjs_hash: 
 // navigate through slides in order
-:revealjs_navigationMode: linear 
+//:revealjs_navigationMode: linear 
+:revealjs_navigationMode: default
 :revealjs_theme: white
 :source-highlighter: highlight.js
 :highlightjs-theme: ../../../reveal.js/plugin/highlight/atom-one-dark.css
