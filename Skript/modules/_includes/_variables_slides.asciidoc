@@ -1,0 +1,43 @@
+:sectnums:
+:docinfo: shared
+:docinfodir: ../templates
+//no section numbering on slides
+:sectnumlevels: 1
+:revealjs_slideNumber: c/t
+:revealjsdir: ../../../reveal.js
+:customcss: ../templates/lecture_theme_slides_munz.css
+:revealjs_progress:
+// make sure that the URL changes when you change slides
+:revealjs_hash: 
+// navigate through slides in order
+:revealjs_navigationMode: linear 
+:revealjs_theme: white
+:source-highlighter: highlight.js
+:highlightjs-theme: ../../../reveal.js/plugin/highlight/atom-one-dark.css
+:icons: font
+:icon-set: fas
+:revealjs_transition: none
+:revealjs_pdfSeparateFragments: false
+:imagesdir: .
+:title-slide-background-image: title.png
+:title-slide-background-size: 70%
+:title-slide-background-position: top 5%
+:title-slide-background-opacity: 0.5
+:title-slide-font-size: 48
+// Full HD resolution
+:revealjs_width: 1920
+:revealjs_height: 1080
+:revealjs_margin: 0.005
+:revealjs_pdfseparatefragments: false
+:xrefstyle: short
+// image cache dir for diagrams
+:diagram-cachedir: ./.img_cache
+// we need the generated images in the same directory as the other images when using slides. therefore, do not re-define the imagesdir
+//:imagesoutdir: ./img_out
+:revealjs_center: false
+:experimental:
+:stem: latexmath
+// deactiate numbering of figures, tables
+:figure-caption!:
+:table-caption!:
+include::_translation.asciidoc[]

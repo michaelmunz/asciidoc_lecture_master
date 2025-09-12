@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "asciitoctor-html",
+            "type": "shell",            
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/**/*.doc.adoc ",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },                     
+        }
+        ,
+        {
+            "label": "asciitoctor-html-all",
+            "type": "shell",            
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/ -v -w modules/*.all.adoc ",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },                     
+        },
+        {
+            "label": "deploy public",
+            "type": "shell",            
+            "command": "xcopy /f /y /s out\\html\\*.html p:\\mmunz\\Lehre\\SOMD\\lab\\html\\",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        },
+        {
+            "label": "deploy solution",
+            "type": "shell",            
+            "command": "python build/deploy_solution.py",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+        ,
+        {
+            "label": "deploy task input",
+            "type": "shell",            
+            "command": "python build/deploy_task_input.py",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+    ]
+    ,
+    "inputs": [
+        {        
+            "id": "githash",
+            "type": "command",
+            "command": "shellCommand.execute",
+                "args": {
+                    "command": "git rev-parse --short HEAD",
+                    "useSingleResult": true
+                }   
+        },
+        
+    ]
+}

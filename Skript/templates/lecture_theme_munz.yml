@@ -1,0 +1,15 @@
+extends: default
+title-page:  
+  font-color: #333333
+  title:
+    background-color: #333333   
+    top: 70% 
+    font-color: #333333
+  subtitle:
+    font-color: #333333
+  authors:
+    font-color: #333333
+  
+  background-image: image:{docimagesdir}/title.png[]
+  logo: 
+    image: image:thu-logo.png[position=top, width=15%]    

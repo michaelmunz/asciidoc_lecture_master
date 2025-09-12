@@ -1,0 +1,21 @@
+// German translation, courtesy of Florian Wilhelm
+ifeval::["{lang}" == "de"]
+:appendix-caption: Anhang
+:caution-caption: Achtung
+:chapter-label: Kapitel
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:important-caption: Wichtig
+:last-update-label: Zuletzt aktualisiert
+:listing-caption: Listing
+:manname-title: BEZEICHNUNG
+:note-caption: Anmerkung
+:preface-title: Vorwort
+:table-caption: Tabelle
+:tip-caption: Hinweis
+:toc-title: Inhalt
+:untitled-label: Ohne Titel
+:version-label: Version
+:warning-caption: Warnung
+endif::[]
+

@@ -1,0 +1,48 @@
+
+<script src="../../../revealjs-plugins/menu/menu.js"></script> 
+<link rel="stylesheet" href="../../../revealjs-plugins/chalkboard/style.css"> 
+<script src="../../../revealjs-plugins/chalkboard/plugin.js"></script> 
+<link rel="stylesheet" href="../../../revealjs-plugins/pointer/pointer.css"> 
+<script src="../../../revealjs-plugins/pointer/pointer.js"></script> 
+
+<script>  
+function loadPlugins() {  
+  Reveal.configure({
+    menu: {
+        side: 'left',
+        openButton: true
+    },
+    keyboard: {
+        67: function() { RevealChalkboard.toggleNotesCanvas() },
+        66: function() { RevealChalkboard.toggleChalkboard() }
+    },
+    pointer: {
+      key: "l", // key to enable pointer, default "q", not case-sensitive
+      color: "red", // color of a cursor, default "red" any valid CSS color
+      opacity: 0.9, // opacity of cursor, default 0.8
+      pointerSize: 25, // pointer size in px, default 12
+      alwaysVisible: false, // should pointer mode be always visible? default "false"
+      tailLength: 10, // NOT IMPLEMENTED YET!!! how long the "tail" should be? default 10
+    },
+    chalkboard:{
+      boardmarkerWidth: 10,
+        chalkWidth: 10,
+        chalkEffect: 1.0,
+    }
+
+  }) 
+  Reveal.registerPlugin(RevealMenu) 
+  Reveal.registerPlugin(RevealChalkboard) 
+  Reveal.registerPlugin(RevealPointer ) 
+
+}
+</script>
+
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    loadPlugins();      
+  });
+  
+</script>
+

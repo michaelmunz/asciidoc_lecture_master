@@ -1,0 +1,112 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "asciitoctor-revealjs",
+            "type": "shell",            
+            //"command": "wsl docker run --rm -it -v /mnt/u/Lehre/SOMD/Skript:/documents asciidoctor/docker-asciidoctor asciidoctor-revealjs -D modules/ -v -w  modules/*.slides.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-revealjs -r asciidoctor-diagram  -a githash=${input:githash} -D modules/ -v -w  modules/*.slides.adoc",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "asciitoctor-pdf",
+            "type": "shell",
+            //"command": "wsl docker run --rm -it -v /mnt/u/Lehre/SOMD/Skript:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -D out/pdf -v -w modules/*.doc.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram  -a githash=${input:githash} -D out/pdf -v -w modules/*.doc.adoc",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            }
+        }
+        ,
+        {
+            "label": "asciitoctor-html",
+            "type": "shell",            
+            //"command": "wsl docker run --rm -it -v /mnt/u/Lehre/SOMD/Skript:/documents asciidoctor/docker-asciidoctor asciidoctor -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
+            //"command": "SET /p GITHASH=build/git-version.txt; docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -a githash=%GITHASH% -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },                     
+        }
+        ,
+        { 
+            "label": "build all",
+            "type": "shell",            
+            "group": "build",
+            "dependsOn": ["asciitoctor-revealjs", "asciitoctor-pdf", "asciitoctor-html"]
+        }
+        ,
+        {
+            "label": "deploy onedrive",
+            "type": "shell",            
+            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\SOMD\\lecture_notes\\\"",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+        ,
+        {
+            "label": "deploy public",
+            "type": "shell",            
+            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\SOMD\\lecture_notes\\",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+        ,
+        {
+            "label": "build and deploy public",
+            "type": "shell",                        
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+            "dependsOrder": "sequence",
+            "dependsOn": ["build all","deploy public"]
+
+        },
+        {
+            "label": "deploy examples",
+            "type": "shell",            
+            "command": "python build/deploy_code.py",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+    ]
+    ,
+    "inputs": [
+        {        
+            "id": "githash",
+            "type": "command",
+            "command": "shellCommand.execute",
+                "args": {
+                    "command": "git rev-parse --short HEAD",
+                    "useSingleResult": true
+                }   
+        },
+        
+    ]
+}

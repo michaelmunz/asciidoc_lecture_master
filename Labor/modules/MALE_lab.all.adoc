@@ -1,0 +1,23 @@
+= Software for Medical Devices - Lab excercises
+// ########################################################
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.0
+:revdate: {localdate} | {githash}
+:lecturetitle: Software for Medical Devices - Lab excercises
+// ########################################################
+:toc:
+include::_includes/_variables_doc.asciidoc[]
+
+
+
+== Python Exercices
+include::python_exercises/python_exercises.doc.adoc[leveloffset=1]
+
+
+
+
+
+
+
+
+

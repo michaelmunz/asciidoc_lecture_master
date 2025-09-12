@@ -1,0 +1,17 @@
+:doctype: book
+:source-highlighter: rouge
+:rouge-style: base16.dark
+:icons: font
+:icon-set: fa
+// we use font awesome 4, because html uses font awesome 4.7.0
+//https://fontawesome.com/v4/icons/
+:pdf-theme: templates/lecture_theme_munz.yml
+:sectnums:
+:imagesdir: ./img
+:xrefstyle: short
+:experimental:
+:stem: latexmath
+// image cache dir for diagrams
+:diagram-cachedir: ./.img_cache
+:imagesoutdir: ./.img_gen
+include::_translation.asciidoc[]
