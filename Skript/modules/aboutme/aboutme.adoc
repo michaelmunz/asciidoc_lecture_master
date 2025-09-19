@@ -18,8 +18,8 @@ ifeval::["{lang}" == "de"]
 **Dozent**:
 Prof. Dr. Michael Munz
 
-Leiter der https://www.aisd-ulm.de[Forschungsgruppe KI für Sensordatenanalyse (AISD), window=_blank] +
-Co-Leiter des Forschungslabors „Biomechatronics” (https://www.thu.de/en/org/imm/biomechatronics[research lab Biomechatronics, window=_blank]) +
+Leiter der https://www.aisd-ulm.de[Forschungsgruppe AI for Sensor Data Analytics (AISD), window=_blank] +
+Co-Leiter des https://www.thu.de/en/org/imm/biomechatronics[Forschungslabors „Biomechatronics”, window=_blank]) +
 
 icon:envelope[] mailto:michael.munz@thu.de[michael.munz@thu.de] +
 icon:map-marker[]  AEA, Raum Q237 +
