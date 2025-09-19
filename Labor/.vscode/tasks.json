@@ -1,3 +1,5 @@
+// add pythonpath to your workspace json file in section "settings": 
+// "python.pythonPath": "..\\..\\env_male\\Scripts\\python.exe"
 {
     "version": "2.0.0",
     "tasks": [
@@ -37,8 +39,11 @@
         },
         {
             "label": "deploy solution",
-            "type": "shell",            
-            "command": "python build/deploy_solution.py",
+            "type": "shell",       
+            "command": "${command:python.interpreterPath}",  
+            "args": [
+                "build/deploy_solution.py"
+            ],     
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -49,8 +54,11 @@
         ,
         {
             "label": "deploy task input",
-            "type": "shell",            
-            "command": "python build/deploy_task_input.py",
+            "type": "shell",      
+            "command": "${command:python.interpreterPath}",  
+            "args": [
+                "build/deploy_task_input.py"
+            ],                  
             "group": "build",
             "presentation": {
                 "reveal": "always",
