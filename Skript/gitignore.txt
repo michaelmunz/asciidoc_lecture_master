@@ -1,0 +1,5 @@
+/modules/**/.ipynb_checkpoints/*
+/modules/**/*.zip
+__pycache__
+.img_gen/
+.img_cache/

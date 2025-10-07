@@ -1,6 +1,5 @@
 // add pythonpath to your workspace json file in section "settings": 
 // "python.pythonPath": "..\\..\\env_male\\Scripts\\python.exe"
-
 {
     "version": "2.0.0",
     "tasks": [
@@ -49,7 +48,7 @@
         {
             "label": "deploy onedrive",
             "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\SOMD\\lecture_notes\\\"",
+            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\MALE\\lecture_notes\\\"",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -61,7 +60,7 @@
         {
             "label": "deploy public",
             "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\SOMD\\lecture_notes\\",
+            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\MALE\\lecture_notes\\",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -84,12 +83,11 @@
 
         },
         {
-
             "label": "deploy examples",
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_code.py"
+                "build/deploy_code.py", "P:/mmunz/Lehre/MALE/lab/inputs"
             ],                
             "group": "build",
             "presentation": {

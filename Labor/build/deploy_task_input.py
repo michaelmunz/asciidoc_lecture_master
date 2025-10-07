@@ -1,6 +1,6 @@
 import os
 import shutil
-
+import sys 
 from tkinter import filedialog
 
 ZIP_EXT = ".zip"
@@ -46,7 +46,7 @@ def deploy_task_inputs(task_dir: str, dest_dir: str):
     input_dir = os.path.join(task_dir, "input")
     
     if os.path.exists(input_dir):
-        zipfile_name = os.path.join(task_dir, exercise_name+ZIP_EXT)
+        zipfile_name = os.path.join(task_dir, exercise_name+"_input"+ZIP_EXT)
         shutil.make_archive(base_name = zipfile_name.replace(ZIP_EXT, ""), format="zip", root_dir = input_dir)
         print(zipfile_name + " -> " + dest_dir)            
         # make directory for the zip file in the destination directory (if not exits)
@@ -59,14 +59,20 @@ def deploy_task_inputs(task_dir: str, dest_dir: str):
     
     
     
-
+args = sys.argv[1:]
+if len(args) >= 1:
+    dest_dir = args[0]
+else:
+    print("Missing destination directory as argument.")
+    sys.exit(1)
+#dest_dir = r'P:\mmunz\Lehre\MALE\lab\inputs'
 
 base_dir = './modules/'
 
 task_dir = filedialog.askdirectory(initialdir=base_dir, title='Select task to publish')
-#task_dir = r'C:\Users\micha\THU\Lehre\SOMD\Labor\docs\python_exercises'
-#task_dir = r'C:\Users\micha\THU\Lehre\SOMD\Labor\docs\simple_patient_monitor'
-dest_dir = r'P:\mmunz\Lehre\SOMD\lab\inputs'
+#task_dir = r'C:\Users\micha\THU\Lehre\MALE\Labor\docs\python_exercises'
+#task_dir = r'C:\Users\micha\THU\Lehre\MALE\Labor\docs\simple_patient_monitor'
+
 
 
 deploy_task_inputs(task_dir, dest_dir)

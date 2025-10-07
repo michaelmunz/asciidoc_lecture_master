@@ -1,14 +1,17 @@
 import os
 import shutil
+import sys
 
 ZIP_EXT = ".zip"
 
 def deploy(base_dir: str, dist_name: str, dest_dir: str): 
-    base_dir = os.path.abspath(base_dir)
     if dest_dir is None or len(dest_dir) == 0:
         raise ValueError("No destination directory given")
     if not os.path.exists(dest_dir):
         raise ValueError("Destination directory does not exist: " + dest_dir)
+    
+    
+    base_dir = os.path.abspath(base_dir)
 
     src_dirs: list[str] = []
     for root, dirs, _ in os.walk(base_dir):
@@ -32,9 +35,17 @@ def deploy(base_dir: str, dist_name: str, dest_dir: str):
         #shutil.copytree(src, dest, dirs_exist_ok=True)
     
 
+
+args = sys.argv[1:]
+if len(args) >= 1:
+    dest_dir = args[0]
+else:
+    print("Missing destination directory as argument.")
+    sys.exit(1)
+#dest_dir = 'P:/mmunz/Lehre/MALE/lecture_notes'
+
 base_dir = 'modules'
-# TODO: set your destination directory here, e.g. 'P:/mmunz/Lehre/MALE/lecture_notes'
-dest_dir = None 
+
 
 print("Deploying notebooks...")
 deploy(base_dir, 'notebooks', dest_dir)
