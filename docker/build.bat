@@ -1,0 +1,1 @@
+docker build -t asciidoctor/docker-asciidoctor-mm .
