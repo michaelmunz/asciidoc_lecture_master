@@ -21,10 +21,11 @@
 :revealjs_pdfSeparateFragments: false
 :imagesdir: .
 :title-slide-background-image: title.png
-:title-slide-background-size: 70%
-:title-slide-background-position: top 5%
+:title-slide-background-size: 100%
+//:title-slide-background-position: top 5%
 :title-slide-background-opacity: 0.5
 :title-slide-font-size: 48
+:title-slide-font-color: #ffffffff
 // Full HD resolution
 :revealjs_width: 1920
 :revealjs_height: 1080

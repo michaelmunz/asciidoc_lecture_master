@@ -17,4 +17,10 @@
 :diagram-cachedir: ./.img_cache
 :imagesoutdir: ./.img_gen
 :stem: latexmath
+:icons: font
+ifdef::backend-docbook5[]
+:icons: image
+:iconsdir: ./icons
+:icontype: svg
+endif::[]
 include::_translation.asciidoc[]

@@ -27,7 +27,7 @@
         {
             "label": "deploy public",
             "type": "shell",            
-            "command": "xcopy /f /y /s out\\html\\*.html p:\\mmunz\\Lehre\\MALE\\lab\\html\\",
+            "command": "xcopy /f /y /s out\\html\\*.html p:\\mmunz\\Lehre\\LECTURE_NAME\\lab\\html\\",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -40,7 +40,7 @@
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_solution.py", "P:/mmunz/Lehre/MALE/lab/solutions"
+                "build/deploy_solution.py", "P:/mmunz/Lehre/LECTURE_NAME/lab/solutions"
             ],              
             "group": "build",
             "presentation": {
@@ -55,7 +55,7 @@
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_task_input.py", "P:/mmunz/Lehre/MALE/lab/inputs"
+                "build/deploy_task_input.py", "P:/mmunz/Lehre/LECTURE_NAME/lab/inputs"
             ],              
             "group": "build",
             "presentation": {
