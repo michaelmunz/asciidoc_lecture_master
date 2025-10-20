@@ -41,7 +41,7 @@
         {
             "label": "db2latex",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/MALE.doc.xml -o /documents/out/pdf/MALE.doc.pdf",            
+            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/LECTURENAME.doc.xml -o /documents/out/pdf/LECTURENAME.doc.pdf",            
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -85,7 +85,7 @@
         {
             "label": "deploy onedrive",
             "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\MALE\\lecture_notes\\\"",
+            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\LECTURENAME\\lecture_notes\\\"",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -97,7 +97,7 @@
         {
             "label": "deploy public",
             "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\MALE\\lecture_notes\\",
+            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\LECTURENAME\\lecture_notes\\",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -124,7 +124,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_code.py", "P:/mmunz/Lehre/MALE/lab/inputs"
+                "build/deploy_code.py", "P:/mmunz/Lehre/LECTURENAME/lab/inputs"
             ],                
             "group": "build",
             "presentation": {
