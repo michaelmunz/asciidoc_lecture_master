@@ -6,7 +6,7 @@
         {
             "label": "asciitoctor-revealjs",
             "type": "shell",            
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-revealjs -r asciidoctor-diagram  -a githash=${input:githash} -D modules/ -v -w  modules/*.slides.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor-revealjs -r asciidoctor-diagram  -a githash=${input:githash} -D modules/ -v -w  modules/*.slides.adoc",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -17,7 +17,7 @@
         {
             "label": "asciitoctor-pdf",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram  -a githash=${input:githash} -D out/pdf -v -w modules/*.doc.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-mathematical -a githash=${input:githash} -D out/pdf -v -w modules/*.doc.adoc",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -27,9 +27,46 @@
         }
         ,
         {
+            "label": "docbook",
+            "type": "shell",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor -b docbook5 -r asciidoctor-diagram -a githash=${input:githash} -v -w modules/*.doc.adoc",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            }
+        }
+        ,
+        {
+            "label": "db2latex",
+            "type": "shell",
+            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/MALE.doc.xml -o /documents/out/pdf/MALE.doc.pdf",            
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },
+        }  
+        ,
+        {
+            "label": "pdf (via docbook)",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": ["docbook", "db2latex"]
+        }                    
+        ,
+        {
             "label": "asciitoctor-html",
             "type": "shell",            
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor -b xhtml5 -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -42,7 +79,7 @@
             "label": "build all",
             "type": "shell",            
             "group": "build",
-            "dependsOn": ["asciitoctor-revealjs", "asciitoctor-pdf", "asciitoctor-html"]
+            "dependsOn": ["asciitoctor-revealjs", "pdf (via docbook)", "asciitoctor-html"]
         }
         ,
         {
@@ -67,7 +104,7 @@
                 "revealProblems": "onProblem",
                 "panel": "dedicated"
             },   
-        }
+        }        
         ,
         {
             "label": "build and deploy public",

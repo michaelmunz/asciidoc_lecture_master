@@ -1,0 +1,67 @@
+%%
+%% This style is derived from the docbook one.
+%%
+%\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{asciidoc-dblatex}
+%% Just use the original package and pass the options.
+\RequirePackageWithOptions{docbook}
+
+% Sidebar is a boxed minipage that can contain verbatim.
+% Changed shadow box to double box.
+\renewenvironment{sidebar}[1][0.95\textwidth]{
+  \hspace{0mm}\newline%
+  \noindent\begin{Sbox}\begin{minipage}{#1}%
+  \setlength\parskip{\medskipamount}%
+}{
+  \end{minipage}\end{Sbox}\doublebox{\TheSbox}%
+}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% change color of the hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+
+% make chapters start at 0 (due to "Organisatorisches")
+\setcounter{chapter}{-1}
+
+% For DocBook literallayout elements, see `./dblatex/dblatex-readme.txt`.
+\usepackage{alltt}
+% To preserve simple quotes in the blocks of code
+\usepackage{upquote}
+
+\usepackage{titling}
+
+
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+	
+		\flushright		
+		\includegraphics[width=3cm]{thu-logo.png}\par
+	
+        \centering
+        \vspace{1cm}
+
+        % Bild einfügen
+        \includegraphics[width=\textwidth]{../modules/img/title.png}\par
+        \vspace{1cm}
+
+		\flushright
+        % Titel
+        {\Huge \bfseries \thetitle \par}        
+
+        % Autor
+        {\Large \theauthor \par}
+        \vfill
+		
+		\flushright
+        % Datum
+        {\small \DBKdate \par}
+    \end{titlepage}
+}

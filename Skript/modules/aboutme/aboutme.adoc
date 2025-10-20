@@ -7,7 +7,14 @@ ifeval::["{lang}" == "en"]
 endif::[]
 :imagesdir: aboutme/img
 
-image::mmunz.jpg[200,100,float=right]
+
+ifeval::["{lang}" == "de"]
+.Der Dozent dieser Veranstaltung
+endif::[]
+ifeval::["{lang}" == "en"]
+.The lecturer of this course
+endif::[]
+image::mmunz.png[width=30%, scaledwidth=30%,float=right]
 
 
 
@@ -18,19 +25,22 @@ ifeval::["{lang}" == "de"]
 **Dozent**:
 Prof. Dr. Michael Munz
 
-Leiter der https://www.aisd-ulm.de[Forschungsgruppe AI for Sensor Data Analytics (AISD), window=_blank] +
-Co-Leiter des https://www.thu.de/en/org/imm/biomechatronics[Forschungslabors "Biomechatronics", window=_blank] +
+- Leiter der https://www.aisd-ulm.de[Forschungsgruppe AI for Sensor Data Analytics (AISD), window=_blank] 
+- Co-Leiter des https://www.thu.de/en/org/imm/biomechatronics[Forschungslabors "Biomechatronics", window=_blank] 
 
-icon:envelope[] mailto:michael.munz@thu.de[michael.munz@thu.de] +
-icon:map-marker[]  AEA, Raum Q237 +
+icon:envelope[width=16] mailto:michael.munz@thu.de[michael.munz@thu.de]
+
+icon:map-marker[width=16]  AEA, Raum Q237
  
-icon:globe[] https://www.thu.de/michael.munz[window=_blank] +
-icon:globe[] https://www.aisd-ulm.de[window=_blank] +
-icon:linkedin[] https://www.linkedin.com/company/105815948/[window=_blank] +
+icon:globe[width=16] https://www.thu.de/michael.munz[window=_blank] 
+
+icon:globe[width=16] https://www.aisd-ulm.de[window=_blank]
+
+icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blank] +
 
 **Lebenslauf:** +
 - 2007: Abschluss in Informatik (Diplom), Universität Ulm, Vertiefungsgebiet Neuroinformatik +
-- 2011: Promotion (Dr.-Ing.): „Generisches Sensorfusionsframework zur simultanen Zustands- und Existenzwertschätzung für die Fahrzeugumgebungserkennung” +
+- 2011: Promotion (Dr.-Ing.): "Generisches Sensorfusionsframework zur simultanen Zustands- und Existenzwertschätzung für die Fahrzeugumgebungserkennung" +
 - 2010–2012: Entwicklungsingenieur und Projektleiter Forschung/Vorentwicklung bei der Daimler AG, Bereich Sensorfusion +
 - 2012–2014: Softwarearchitekt und Projektleiter in der Entwicklung kamerabasierter Bildverarbeitungs- und Überwachungssysteme bei der Cassidian Optronics GmbH +
 - Seit 2014: Professor für Software Engineering und Sensorik (THU) +
@@ -41,11 +51,13 @@ icon:linkedin[] https://www.linkedin.com/company/105815948/[window=_blank] +
 * Maschinelles Lernen, insbesondere Deep Learning für Zeitreihen- und Bilddaten
 * Zuverlässige KI-Systeme, erklärbare KI
 * Anwendungen: Automatisierte Sensordatenanalyse in Therapie, Diagnose und Sport (z. B. Bewegungsanalyse)
+
 Weitere Informationen zu meiner Forschung finden Sie auf der Website meiner Forschungsgruppe *AI for Sensor Data Analytics (AISD)*:
 
-icon:globe[] https://www.aisd-ulm.de[window=_blank]
+icon:globe[width=16] https://www.aisd-ulm.de[window=_blank]
 
-icon:hand-o-right[] Wenn Sie Interesse an einer Abschlussarbeit oder einem Projekt im Bereich meiner Forschungsprojekte haben, kontaktieren Sie mich bitte. Ich habe mehrere interessante Themen für Abschlussarbeiten oder Projekte im Bereich KI für Sensordatenanalyse. Ein Team motivierter Doktoranden und ich würden uns freuen, mit Ihnen an diesen Themen zu arbeiten. +
+icon:hand-point-right[width=16] Wenn Sie Interesse an einer Abschlussarbeit oder einem Projekt im Bereich meiner Forschungsprojekte haben, kontaktieren Sie mich bitte. Ich habe mehrere interessante Themen für Abschlussarbeiten oder Projekte im Bereich KI für Sensordatenanalyse. Ein Team motivierter Doktoranden und ich würden uns freuen, mit Ihnen an diesen Themen zu arbeiten. 
+
 
 
 endif::[]
@@ -55,26 +67,30 @@ endif::[]
 // ------------------------ EN ----------------------
 ifeval::["{lang}" == "en"]
 
+
 **Lecturer**: 
 Prof. Dr. Michael Munz
 
-Lead of the https://www.aisd-ulm.de[research group AI for Sensor Data Analytics (AISD), window=_blank] + 
-Joint lead of the https://www.thu.de/en/org/imm/biomechatronics[research lab "Biomechatronics", window=_blank] + 
+- Lead of the https://www.aisd-ulm.de[research group AI for Sensor Data Analytics (AISD), window=_blank] 
+- Joint lead of the https://www.thu.de/en/org/imm/biomechatronics[research lab "Biomechatronics", window=_blank] 
 
-icon:envelope[] mailto:michael.munz@thu.de[michael.munz@thu.de] +
-icon:map-marker[]  AEA, room Q237 + 
+icon:envelope[width=16] mailto:michael.munz@thu.de[michael.munz@thu.de]
 
-icon:globe[] https://www.thu.de/michael.munz[window=_blank] +
-icon:globe[] https://www.aisd-ulm.de[window=_blank] +
-icon:linkedin[] https://www.linkedin.com/company/105815948/[window=_blank] +
+icon:map-marker[width=16]  AEA, room Q237 
+
+icon:globe[width=16] https://www.thu.de/michael.munz[window=_blank]
+
+icon:globe[width=16] https://www.aisd-ulm.de[window=_blank]
+
+icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blank]
 
 
 **Vita:** +
 2007: Degree in computer science (diploma), University of Ulm, specialized in neuroinformatics +
-2011: Doctorate (Dr.-Ing.): "Generic sensor fusion framework for simultaneous state and existence estimation for vehicle environment recognition" + 
-2010-2012: Development engineer and project manager research/pre-development at Daimler AG, sensor fusion division + 
-2012-2014: Software architect and project manager in the development of camera-based vision and monitoring systems at Cassidian Optronics GmbH + 
-2014: Professor for Software Engineering and Sensor Technology (THU) + 
+2011: Doctorate (Dr.-Ing.): "Generic sensor fusion framework for simultaneous state and existence estimation for vehicle environment recognition" +
+2010-2012: Development engineer and project manager research/pre-development at Daimler AG, sensor fusion division +
+2012-2014: Software architect and project manager in the development of camera-based vision and monitoring systems at Cassidian Optronics GmbH +
+2014: Professor for Software Engineering and Sensor Technology (THU) +
 
 
 **Research interests:** 
@@ -84,9 +100,9 @@ icon:linkedin[] https://www.linkedin.com/company/105815948/[window=_blank] +
 * Applications: Automated sensor data analysis in therapy, diagnosis and sports (e.g. motion analysis)
 
 For more information on my research, please visit the website of our research group *AI for Sensor Data Analytics (AISD)*: 
-icon:globe[] https://www.aisd-ulm.de[window=_blank] 
+icon:globe[width=16] https://www.aisd-ulm.de[window=_blank] 
 
-icon:hand-o-right[] If you are interested in a thesis or a project within the area of my research projects, please contact me. I have several interesting topics for thesis or projects in the area of AI for sensor data analysis. A team of motivated PhD students and I would be happy to work with your on those topics. +
+icon:hand-point-right[width=16] If you are interested in a thesis or a project within the area of my research projects, please contact me. I have several interesting topics for thesis or projects in the area of AI for sensor data analysis. A team of motivated PhD students and I would be happy to work with your on those topics. 
 
 endif::[]
 
