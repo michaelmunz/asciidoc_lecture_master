@@ -100,6 +100,7 @@ icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blan
 * Applications: Automated sensor data analysis in therapy, diagnosis and sports (e.g. motion analysis)
 
 For more information on my research, please visit the website of our research group *AI for Sensor Data Analytics (AISD)*: 
+
 icon:globe[width=16] https://www.aisd-ulm.de[window=_blank] 
 
 icon:hand-point-right[width=16] If you are interested in a thesis or a project within the area of my research projects, please contact me. I have several interesting topics for thesis or projects in the area of AI for sensor data analysis. A team of motivated PhD students and I would be happy to work with your on those topics. 
