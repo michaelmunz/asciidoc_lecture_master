@@ -6,7 +6,7 @@
         {
             "label": "asciitoctor-revealjs",
             "type": "shell",            
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor-revealjs -r asciidoctor-diagram  -a githash=${input:githash} -D modules/ -v -w  modules/*.slides.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-revealjs -r asciidoctor-diagram  -a githash=${input:githash} -D modules/ -v -w  modules/*.slides.adoc",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -17,7 +17,7 @@
         {
             "label": "asciitoctor-pdf",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-mathematical -a githash=${input:githash} -D out/pdf -v -w modules/*.doc.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-mathematical -a githash=${input:githash} -D out/pdf -v -w modules/*.doc.adoc",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -29,7 +29,7 @@
         {
             "label": "docbook",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor -b docbook5 -r asciidoctor-diagram -a githash=${input:githash} -v -w modules/*.doc.adoc",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -b docbook5 -r asciidoctor-diagram -a githash=${input:githash} -v -w modules/*.doc.adoc",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -66,7 +66,7 @@
         {
             "label": "asciitoctor-html",
             "type": "shell",            
-            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor-mm asciidoctor -b xhtml5 -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
+            "command": "docker run --rm -it -v .:/documents asciidoctor/docker-asciidoctor asciidoctor -b xhtml5 -a githash=${input:githash} -r asciidoctor-diagram -a data-uri -allow-uri-read -D out/html -v -w modules/*.doc.adoc ",
             "group": "build",
             "presentation": {
                 "reveal": "always",
