@@ -20,7 +20,7 @@
 :icons: font
 ifdef::backend-docbook5[]
 :icons: image
-:iconsdir: ./icons
+:iconsdir: ./img/icons
 :icontype: svg
 endif::[]
 include::_translation.asciidoc[]
