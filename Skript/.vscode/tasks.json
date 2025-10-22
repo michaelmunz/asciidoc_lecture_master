@@ -124,7 +124,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_code.py", "P:/mmunz/Lehre/LECTURENAME/lab/inputs"
+                "build/deploy_code.py", "P:/mmunz/Lehre/LECTURENAME/lecture_notes"
             ],                
             "group": "build",
             "presentation": {
