@@ -23,7 +23,7 @@
   
 }
 
-div.title{
+div.title, caption.title{
   color: gray;
   font-size: 0.8em;
   font-style: italic;
