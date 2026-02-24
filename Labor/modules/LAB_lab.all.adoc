@@ -1,18 +1,18 @@
-= Software for Medical Devices - Lab excercises
+= TITEL - Labor
 // ########################################################
 :author: Prof. Dr. Michael Munz
 :revnumber: 1.0
 :revdate: {localdate} | {githash}
-:lecturetitle: Software for Medical Devices - Lab excercises
+:lecturetitle: TITEL - Labor
+:lang: de
 // ########################################################
 :toc:
 include::_includes/_variables_doc.asciidoc[]
 
 
 
-== Python Exercices
-include::python_exercises/python_exercises.doc.adoc[leveloffset=1]
-
+//== Einführung in Pandas
+//include::intro_pandas/intro_pandas.doc.adoc[leveloffset=1]
 
 
 
