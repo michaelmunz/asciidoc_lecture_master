@@ -1,0 +1,21 @@
+= TITEL
+// ########################################################
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.0
+:revdate: {localdate} | {githash}
+:lecturetitle: TITEL
+:lang: de
+// ########################################################
+include::_includes/_variables_doc.asciidoc[]
+
+[IMPORTANT]
+Nutzung der Unterlagen nur im Rahmen der Lehrveranstaltung gestattet
+
+
+== Organisatorisches
+include::organisatorisches/organisatorisches.adoc[leveloffset=1]
+
+
+//[appendix]
+//== Additional Information
+//include::learning_goals/learning_goals.adoc[leveloffset=1]
