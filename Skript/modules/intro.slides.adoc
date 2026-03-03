@@ -1,0 +1,19 @@
+= Einführung
+// ########################################################
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.0
+:revdate: {localdate} | {githash}
+:lecturetitle: TITEL
+:lang: de
+// ########################################################
+include::_includes/_variables_slides.asciidoc[]
+
+[.text-center]
+{lecturetitle} +
+Version {revnumber} ({revdate})
+
+include::intro/intro.adoc[]
+
+include::_includes/_lastslide.asciidoc[]
+
+

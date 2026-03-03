@@ -1,0 +1,19 @@
+= About me
+// ########################################################
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.0
+:revdate: {localdate} | {githash}
+:lecturetitle: Grundlagen der Software-Entwicklung 2 (SOTE2)
+:lang: de
+// ########################################################
+include::_includes/_variables_slides.asciidoc[]
+
+[.text-center]
+{lecturetitle} +
+Version {revnumber} ({revdate})
+
+include::aboutme/aboutme.adoc[]
+
+include::_includes/_lastslide.asciidoc[]
+
+
