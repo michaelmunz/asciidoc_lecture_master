@@ -3,7 +3,7 @@
 :author: Prof. Dr. Michael Munz
 :revnumber: 1.0
 :revdate: {localdate} | {githash}
-:lecturetitle: TITEL
+:lecturetitle: Softwareentwicklung 2
 :lang: de
 // ########################################################
 include::_includes/_variables_slides.asciidoc[]
@@ -12,6 +12,8 @@ include::_includes/_variables_slides.asciidoc[]
 {lecturetitle} +
 Version {revnumber} ({revdate})
 
+
+include::aboutme/aboutme.adoc[]
 include::intro/intro.adoc[]
 
 include::_includes/_lastslide.asciidoc[]

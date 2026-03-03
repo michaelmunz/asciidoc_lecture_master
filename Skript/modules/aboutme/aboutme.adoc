@@ -25,8 +25,8 @@ ifeval::["{lang}" == "de"]
 **Dozent**:
 Prof. Dr. Michael Munz
 
-- Leiter der https://www.aisd-ulm.de[Forschungsgruppe AI for Sensor Data Analytics (AISD), window=_blank] 
-- Co-Leiter des https://www.thu.de/en/org/imm/biomechatronics[Forschungslabors "Biomechatronics", window=_blank] 
+* Leiter der https://www.aisd-ulm.de[Forschungsgruppe AI for Sensor Data Analytics (AISD), window=_blank] 
+* Co-Leiter des https://www.thu.de/en/org/imm/biomechatronics[Forschungslabors "Biomechatronics", window=_blank] 
 
 icon:envelope[width=16] mailto:michael.munz@thu.de[michael.munz@thu.de]
 
@@ -38,6 +38,8 @@ icon:globe[width=16] https://www.aisd-ulm.de[window=_blank]
 
 icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blank] +
 
+ifdef::backend-revealjs[=== Lebenslauf]
+
 **Lebenslauf:** +
 - 2007: Abschluss in Informatik (Diplom), Universität Ulm, Vertiefungsgebiet Neuroinformatik +
 - 2011: Promotion (Dr.-Ing.): "Generisches Sensorfusionsframework zur simultanen Zustands- und Existenzwertschätzung für die Fahrzeugumgebungserkennung" +
@@ -45,6 +47,8 @@ icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blan
 - 2012–2014: Softwarearchitekt und Projektleiter in der Entwicklung kamerabasierter Bildverarbeitungs- und Überwachungssysteme bei der Cassidian Optronics GmbH +
 - Seit 2014: Professor für Software Engineering und Sensorik (THU) +
  
+
+ifdef::backend-revealjs[=== Forschungsinteressen]
 
 **Forschungsinteressen:**
 
@@ -71,8 +75,8 @@ ifeval::["{lang}" == "en"]
 **Lecturer**: 
 Prof. Dr. Michael Munz
 
-- Lead of the https://www.aisd-ulm.de[research group AI for Sensor Data Analytics (AISD), window=_blank] 
-- Joint lead of the https://www.thu.de/en/org/imm/biomechatronics[research lab "Biomechatronics", window=_blank] 
+* Lead of the https://www.aisd-ulm.de[research group AI for Sensor Data Analytics (AISD), window=_blank] 
+* Joint lead of the https://www.thu.de/en/org/imm/biomechatronics[research lab "Biomechatronics", window=_blank] 
 
 icon:envelope[width=16] mailto:michael.munz@thu.de[michael.munz@thu.de]
 
@@ -85,7 +89,9 @@ icon:globe[width=16] https://www.aisd-ulm.de[window=_blank]
 icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blank]
 
 
-**Vita:** +
+ifdef::backend-revealjs[=== Curriculum Vitae]
+
+**Curriculum Vitae:** +
 2007: Degree in computer science (diploma), University of Ulm, specialized in neuroinformatics +
 2011: Doctorate (Dr.-Ing.): "Generic sensor fusion framework for simultaneous state and existence estimation for vehicle environment recognition" +
 2010-2012: Development engineer and project manager research/pre-development at Daimler AG, sensor fusion division +
@@ -93,6 +99,7 @@ icon:linkedin[width=16] https://www.linkedin.com/company/105815948/[window=_blan
 2014: Professor for Software Engineering and Sensor Technology (THU) +
 
 
+ifdef::backend-revealjs[=== Research Interests]
 **Research interests:** 
 
 * Machine learning, especially deep learning for time series and image data
