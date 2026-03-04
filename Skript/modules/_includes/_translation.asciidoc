@@ -18,5 +18,8 @@ ifeval::["{lang}" == "de"]
 :untitled-label: Ohne Titel
 :version-label: Version
 :warning-caption: Warnung
+:chapter-refsig: Kapitel
+:section-refsig: Abschnitt
+:appendix-refsig: Anhang
 endif::[]
 

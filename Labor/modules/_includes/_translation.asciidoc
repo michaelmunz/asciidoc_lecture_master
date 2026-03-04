@@ -10,12 +10,16 @@ ifeval::["{lang}" == "de"]
 :listing-caption: Listing
 :manname-title: BEZEICHNUNG
 :note-caption: Anmerkung
-:preface-title: Vorwort
+// no preface in lecture script
+//:preface-title: Vorwort 
 :table-caption: Tabelle
 :tip-caption: Hinweis
 :toc-title: Inhalt
 :untitled-label: Ohne Titel
 :version-label: Version
 :warning-caption: Warnung
+:chapter-refsig: Kapitel
+:section-refsig: Abschnitt
+:appendix-refsig: Anhang
 endif::[]
 
