@@ -1,0 +1,30 @@
+ifndef::author[]
+= LECTURENAME - Labor
+// ########################################################
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.0
+:revdate: {localdate} | {githash}
+:lecturetitle: LECTURENAME - Labor
+:lang: de
+// ########################################################
+include::../_includes/_variables_doc.asciidoc[]
+:!sectnums:
+endif::[]
+
+:task-name: MEIN_TASKNAME
+== TASKNAME (__{task-name}__)
+
+.Folgende Kenntnisse werden vorausgesetzt:
+[NOTE]
+--
+* Kenntnis 1 
+* Kenntnis 2
+--
+
+****
+link:../inputs/{task-name}_input.zip[Input Files]
+
+link:../solutions/{task-name}_solution.zip[Lösung]
+****
+
+In dieser Aufgabe...
