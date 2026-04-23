@@ -1,5 +1,5 @@
-:chapter-name: chapter_xy
-:imagesdir: {chapter-name}/img
+:chapter_name: chapter_xy
+:imagesdir: {chapter_name}/img
 
 
 ==
