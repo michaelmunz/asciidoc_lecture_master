@@ -1,0 +1,32 @@
+:chapter-name: chapter_xy
+:imagesdir: {chapter-name}/img
+
+
+==
+Lernziele:
+
+* ...
+* ...
+* ...
+* ...
+
+
+[.notes]
+--
+====
+**Beispiele:** link:../examples/{chapter_name}.zip[{chapter_name}.zip, {window=_blank]
+====
+--
+
+ifdef::backend-revealjs[]
+:imagesdir-old: {imagesdir}
+:imagesdir: intro/img
+=== Advance Organizer: die Themen im Überblick
+.Advance Organizer: die Themen im Überblick
+image::advance_organizer.png[width=100%, scaledwidth=100%, align=center]
+:imagesdir: {imagesdir-old}
+endif::[]
+
+== Kapitelüberschrift 1
+
+...

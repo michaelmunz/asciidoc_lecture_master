@@ -14,6 +14,7 @@ Nutzung der Unterlagen nur im Rahmen der Lehrveranstaltung gestattet
 
 == Organisatorisches
 include::organisatorisches/organisatorisches.adoc[leveloffset=1]
+include::chapter_xy/chapter_xy.adoc[leveloffset=1]
 
 
 //[appendix]
