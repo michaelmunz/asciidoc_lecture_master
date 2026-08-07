@@ -17,7 +17,7 @@
 :highlightjs-theme: ../../../reveal.js/plugin/highlight/atom-one-dark.css
 :icons: font
 :icon-set: fas
-:revealjs_transition: none
+:revealjs_transition: slide
 :revealjs_pdfSeparateFragments: false
 :imagesdir: .
 :title-slide-background-image: title.png
@@ -30,7 +30,8 @@
 :revealjs_width: 1920
 :revealjs_height: 1080
 :revealjs_margin: 0.005
-:revealjs_pdfseparatefragments: false
+:revealjs_minScale: 0.2
+:revealjs_maxScale: 2.0
 :xrefstyle: short
 // image cache dir for diagrams
 :diagram-cachedir: ./.img_cache
