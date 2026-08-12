@@ -41,7 +41,7 @@
         {
             "label": "db2latex",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/LECTURENAME.doc.xml -o /documents/out/pdf/LECTURENAME.doc.pdf",            
+            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/SOTE2.doc.xml -o /documents/out/pdf/SOTE2.doc.pdf",            
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -80,30 +80,21 @@
             "type": "shell",            
             "group": "build",
             "dependsOn": ["asciitoctor-revealjs", "pdf (via docbook)", "asciitoctor-html"]
-        }
+        }        
         ,
         {
-            "label": "deploy onedrive",
-            "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* \"${userHome}\\OneDrive - thu.de\\_public\\Lehre\\LECTURENAME\\lecture_notes\\\"",
+            "label": "deploy docs",
+            "type": "shell",      
+            "command": "${command:python.interpreterPath}",  
+            "args": [
+                "build/deploy.py", "--destdir", "SOTE2/lecture_notes", "--type", "docs", "--basedir", "out"
+            ],                
             "group": "build",
             "presentation": {
                 "reveal": "always",
                 "revealProblems": "onProblem",
                 "panel": "dedicated"
-            },   
-        }
-        ,
-        {
-            "label": "deploy public",
-            "type": "shell",            
-            "command": "xcopy /f /y /s out\\*.* p:\\mmunz\\Lehre\\LECTURENAME\\lecture_notes\\",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "revealProblems": "onProblem",
-                "panel": "dedicated"
-            },   
+            },      
         }        
         ,
         {
@@ -124,7 +115,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_code.py", "P:/mmunz/Lehre/LECTURENAME/lecture_notes"
+                "build/deploy.py", "--destdir", "SOTE2/lecture_notes/examples", "--type", "examples"
             ],                
             "group": "build",
             "presentation": {

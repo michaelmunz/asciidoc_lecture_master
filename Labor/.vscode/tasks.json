@@ -25,22 +25,25 @@
             },                     
         },
         {
-            "label": "deploy public",
-            "type": "shell",            
-            "command": "xcopy /f /y /s out\\html\\*.html p:\\mmunz\\Lehre\\LECTURE_NAME\\lab\\html\\",
+             "label": "deploy docs",
+            "type": "shell",      
+            "command": "${command:python.interpreterPath}",  
+            "args": [
+                "build/deploy.py", "--destdir", "SOTE2/lab", "--type", "docs", "--basedir", "out"
+            ],                
             "group": "build",
             "presentation": {
                 "reveal": "always",
                 "revealProblems": "onProblem",
                 "panel": "dedicated"
-            },   
+            },      
         },
         {
             "label": "deploy solution",
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_solution.py", "P:/mmunz/Lehre/LECTURE_NAME/lab/solutions"
+                "build/deploy.py", "--destdir", "SOTE2/lab/solutions", "--type", "solution"
             ],              
             "group": "build",
             "presentation": {
@@ -55,8 +58,23 @@
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy_task_input.py", "P:/mmunz/Lehre/LECTURE_NAME/lab/inputs"
+                "build/deploy.py", "--destdir", "SOTE2/lab/inputs", "--type", "input"
             ],              
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "dedicated"
+            },   
+        }
+        ,
+        {
+            "label": "delete solutions",
+            "type": "shell",      
+            "command": "${command:python.interpreterPath}",  
+            "args": [
+                "build/delete_solutions.py", "--basedir", "SOTE2/lab/solutions", "--extension", "*.zip"
+            ],                
             "group": "build",
             "presentation": {
                 "reveal": "always",
