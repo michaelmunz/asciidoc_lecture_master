@@ -29,7 +29,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy.py", "--destdir", "SOTE2/lab", "--type", "docs", "--basedir", "out"
+                "build/deploy.py", "--destdir", "LECTURE_NAME/lab", "--type", "docs", "--basedir", "out"
             ],                
             "group": "build",
             "presentation": {
@@ -43,7 +43,7 @@
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy.py", "--destdir", "SOTE2/lab/solutions", "--type", "solution"
+                "build/deploy.py", "--destdir", "LECTURE_NAME/lab/solutions", "--type", "solution"
             ],              
             "group": "build",
             "presentation": {
@@ -58,7 +58,7 @@
             "type": "shell",            
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy.py", "--destdir", "SOTE2/lab/inputs", "--type", "input"
+                "build/deploy.py", "--destdir", "LECTURE_NAME/lab/inputs", "--type", "input"
             ],              
             "group": "build",
             "presentation": {
@@ -73,7 +73,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/delete_solutions.py", "--basedir", "SOTE2/lab/solutions", "--extension", "*.zip"
+                "build/delete_solutions.py", "--basedir", "LECTURE_NAME/lab/solutions", "--extension", "*.zip"
             ],                
             "group": "build",
             "presentation": {
