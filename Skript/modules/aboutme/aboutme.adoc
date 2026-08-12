@@ -43,8 +43,8 @@ ifdef::backend-revealjs[=== Lebenslauf]
 **Lebenslauf:** +
 - 2007: Abschluss in Informatik (Diplom), Universität Ulm, Vertiefungsgebiet Neuroinformatik +
 - 2011: Promotion (Dr.-Ing.): "Generisches Sensorfusionsframework zur simultanen Zustands- und Existenzwertschätzung für die Fahrzeugumgebungserkennung" +
-- 2010–2012: Entwicklungsingenieur und Projektleiter Forschung/Vorentwicklung bei der Daimler AG, Bereich Sensorfusion +
-- 2012–2014: Softwarearchitekt und Projektleiter in der Entwicklung kamerabasierter Bildverarbeitungs- und Überwachungssysteme bei der Cassidian Optronics GmbH +
+- 2010-2012: Entwicklungsingenieur und Projektleiter Forschung/Vorentwicklung bei der Daimler AG, Bereich Sensorfusion +
+- 2012-2014: Softwarearchitekt und Projektleiter in der Entwicklung kamerabasierter Bildverarbeitungs- und Überwachungssysteme bei der Cassidian Optronics GmbH +
 - Seit 2014: Professor für Software Engineering und Sensorik (THU) +
  
 
