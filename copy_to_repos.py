@@ -11,7 +11,7 @@ parent_dir = os.path.abspath(os.path.join(src_base_path, '..'))
 
 siblings = os.listdir(parent_dir)
 
-folders_to_copy = ['build', 'templates', 'modules/aboutme', 'modules/_includes']
+folders_to_copy = ['build', 'templates', 'modules/aboutme', 'modules/_includes', '.vscode']
 
 print(f"Looking for sibling folders in {parent_dir}...")
 
