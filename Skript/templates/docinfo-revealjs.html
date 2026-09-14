@@ -1,4 +1,3 @@
-
 <script src="../../../revealjs-plugins/menu/menu.js"></script> 
 <link rel="stylesheet" href="../../../revealjs-plugins/chalkboard/style.css"> 
 <script src="../../../revealjs-plugins/chalkboard/plugin.js"></script> 
@@ -35,6 +34,21 @@ function loadPlugins() {
   Reveal.registerPlugin(RevealChalkboard) 
   Reveal.registerPlugin(RevealPointer ) 
 
+  // Alle Bilder einer Folie automatisch als "stretch" behandeln, ohne dass im
+  // AsciiDoc jedes Mal role="stretch" manuell gesetzt werden muss. reveal.js
+  // berechnet für .stretch-Elemente selbst die passende Höhe zum verbleibenden
+  // Platz auf der Folie.
+  function autoStretchImages(slide) {
+    if (!slide) return;
+    const imgs = slide.querySelectorAll('img:not(.stretch)');
+    if (imgs.length === 0) return;
+    imgs.forEach(img => img.classList.add('stretch'));
+    Reveal.layout(); // reveal.js zwingen, die Stretch-Größe sofort neu zu berechnen
+  }
+
+  Reveal.on('ready', event => autoStretchImages(event.currentSlide));
+  Reveal.on('slidechanged', event => autoStretchImages(event.currentSlide));
+
 }
 </script>
 
@@ -45,4 +59,3 @@ function loadPlugins() {
   });
   
 </script>
-

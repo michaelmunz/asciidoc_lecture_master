@@ -1,63 +1,237 @@
-.reveal section.title h1 {
-	margin-top: 1em;        
+/* =========================================================
+   Vorlesungsfolien - Design-Tokens
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+.reveal {
+  --ink: #1B2430;           /* Haupttextfarbe, warmes Tintenblau statt reines Schwarz */
+  --ink-soft: #4A5568;      /* abgeschwächter Text, z.B. Footer, Bildunterschriften */
+  --paper: #ffffff;         /* Folienhintergrund */
+  --line: #D8DCE3;          /* dünne Trennlinien */
+
+  --accent-example: #B8860B;      /* Beispiel-Block: gedämpftes Bernstein */
+  --accent-example-bg: #FFF8E9;
+  --accent-admonition-info: #2B6CB0;         /* note, tip: informativ - blau */
+  --accent-admonition-info-bg: #EBF3FB;
+  --accent-admonition-critical: #B0413E;     /* important, warning, caution: kritisch - rot */
+  --accent-admonition-critical-bg: #FDF1F0;
+  --accent-sidebar: #6B7280;      /* Sidebar: neutral */
+  --accent-sidebar-bg: #F3F4F6;
+
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Cascadia Code', Consolas, monospace;
+
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
 }
 
+/* =========================================================
+   Typografie
+   ========================================================= */
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: none;      /* kein Versal-Zwang mehr - lange dt. Komposita bleiben lesbar */
+  letter-spacing: normal;
+}
+
+.reveal h1,
+.reveal h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--line);   /* strukturelle Trennung statt Farbfläche */
+  margin-bottom: 0.6em;
+}
+
+.reveal section.title h1 {
+  margin-top: 1em;
+  border-bottom: none;
+}
+
+.reveal p,
+.reveal li {
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.reveal code,
+.reveal pre code {
+  font-family: var(--font-mono);
+}
+
+/* =========================================================
+   Layout / Grundstruktur
+   ========================================================= */
+
+.slide-content {
+  text-align: left;
+}
 
 .reveal .footer {
   position: absolute;
   bottom: 1em;
   left: 0;
   font-size: 0.4em;
-  color: gray;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
 }
 
-
-
-.slide-content{
-  text-align: left;
-  
-}
-
-.reveal{
-  background-color: white;
-  
-}
-
-div.title, caption.title{
-  color: gray;
+div.title,
+caption.title {
+  color: var(--ink-soft);
   font-size: 0.8em;
   font-style: italic;
 }
 
-/*
-.reveal{
-  background-color: white;
+/* =========================================================
+   Info-Blöcke: linker Farbbalken statt Vollfläche,
+   Farbe kodiert den Block-Typ (Beispiel vs. Wichtig vs. Randnotiz)
+   ========================================================= */
+
+.reveal .exampleblock {
+  background-color: var(--accent-example-bg);
+  border: none;
+  border-left: 4px solid var(--accent-example);
+  border-radius: 4px;
+  padding: 0.35em 0.8em;
+  margin: 0.4em 0;
 }
 
-*/
-
-.reveal .exampleblock{
-  background-color: #fff5a6;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+.reveal .admonitionblock {
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--accent-admonition-info-bg);
+  border-radius: 12px;
+  overflow: hidden; /* schneidet Zellinhalt an den runden Ecken ab */
+  margin: 0.4em 0;
 }
 
-.reveal .admonitionblock .content{
-  background-color: #fff5a6;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+.reveal .admonitionblock table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-
-.reveal .sidebarblock{
-  background-color: #E1E1E1; 
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+.reveal .admonitionblock .icon {
+  border-right: 4px solid var(--accent-admonition-info); /* Trenner zwischen Icon und Text */
+  padding: 0.25em 0.8em;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--accent-admonition-info);
+  white-space: nowrap;
 }
 
+.reveal .admonitionblock .content {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.25em 0.7em;
+  margin: 0;
+}
+
+.reveal .admonitionblock .content > :first-child {
+  margin-top: 0;
+}
+
+.reveal .admonitionblock .content > :last-child {
+  margin-bottom: 0;
+}
+
+.reveal .admonitionblock .content p {
+  margin: 0;
+}
+
+/* Kritische Admonitions (important, warning, caution) - rot statt blau.
+   Asciidoctor setzt diese Typ-Klassen automatisch auf .admonitionblock. */
+.reveal .admonitionblock.important,
+.reveal .admonitionblock.warning,
+.reveal .admonitionblock.caution {
+  background-color: var(--accent-admonition-critical-bg);
+}
+
+.reveal .admonitionblock.important .icon,
+.reveal .admonitionblock.warning .icon,
+.reveal .admonitionblock.caution .icon {
+  border-right-color: var(--accent-admonition-critical);
+  color: var(--accent-admonition-critical);
+}
+
+.reveal .sidebarblock {
+  background-color: var(--accent-sidebar-bg);
+  border: none;
+  border-left: 4px solid var(--accent-sidebar);
+  border-radius: 12px;
+  padding: 0.35em 0.8em;
+  margin: 0.4em 0;
+}
+
+/* =========================================================
+   .stretch-Bilder: reveal.js setzt die Höhe passend zum
+   verbleibenden Platz - Breite muss dabei IMMER "auto" bleiben,
+   sonst wird das Bild verzerrt (Seitenverhältnis geht verloren).
+   ========================================================= */
+
+.reveal .stretch,
+.reveal img.stretch,
+.reveal .slides section img.stretch {
+  width: auto !important;
+  max-width: 100%;
+  height: var(--stretch-height, auto);
+  object-fit: contain;
+}
+
+/* =========================================================
+   Nummerierte Callout-Marker (1 / 2 / 3) in Code-Blöcken und
+   den zugehörigen Erklärlisten - Akzentfarbe statt Textfarbe,
+   damit die Sequenz auf einen Blick erkennbar ist.
+   ========================================================= */
+
+.reveal .conum,
+.reveal .conum b,
+.reveal i.conum {
+  background-color: var(--accent-admonition-info) !important;
+  color: #fff !important;
+}
+
+.reveal .conum b {
+  color: #fff !important;
+}
+
+/* =========================================================
+   Bereits gezeigte Fragmente abdunkeln, damit der Blick
+   automatisch auf das gerade aktive Fragment fällt, statt dass
+   alle Schritte gleich kräftig konkurrieren.
+   ========================================================= */
+
+.reveal .fragment.visible:not(.current-fragment) {
+  opacity: 0.45;
+}
+
+/* =========================================================
+   Trennfolien: Sections, deren einziges Kind eine Überschrift
+   ist (== Kapitel gefolgt direkt von === Unterfolien), werden
+   automatisch erkannt - kein manuelles Markup im AsciiDoc nötig.
+   Wichtig: "display" wird bewusst NICHT angefasst, das steuert
+   reveal.js selbst dynamisch (Sichtbarkeit der aktuellen Folie).
+   ========================================================= */
+
+.reveal section:has(> h1:only-child),
+.reveal section:has(> h2:only-child),
+.reveal section:has(> h3:only-child) {
+  background-color: var(--ink) !important;
+}
+
+.reveal section:has(> h1:only-child) h1,
+.reveal section:has(> h2:only-child) h2,
+.reveal section:has(> h3:only-child) h3 {
+  color: #fff;
+  border-bottom: none;
+  text-align: center;
+  margin: 0;
+  padding: 2em 5%;
+  font-size: 1.6em;
+}
