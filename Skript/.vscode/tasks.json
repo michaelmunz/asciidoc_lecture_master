@@ -41,7 +41,7 @@
         {
             "label": "db2latex",
             "type": "shell",
-            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/SOTE2.doc.xml -o /documents/out/pdf/SOTE2.doc.pdf",            
+            "command": "docker run --rm -it -v .:/documents mmunz/tex dblatex  -s /documents/templates/asciidoc-dblatex.sty -p /documents/templates/asciidoc-dblatex.xsl -T simple -t pdf /documents/modules/[LECTURE_NAME].doc.xml -o /documents/out/pdf/[LECTURE_NAME].doc.pdf",            
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -87,7 +87,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy.py", "--destdir", "SOTE2/lecture_notes", "--type", "docs", "--basedir", "out"
+                "build/deploy.py", "--destdir", "[LECTURE_NAME]/lecture_notes", "--type", "docs", "--basedir", "out"
             ],                
             "group": "build",
             "presentation": {
@@ -115,7 +115,7 @@
             "type": "shell",      
             "command": "${command:python.interpreterPath}",  
             "args": [
-                "build/deploy.py", "--destdir", "SOTE2/lecture_notes/examples", "--type", "examples"
+                "build/deploy.py", "--destdir", "[LECTURE_NAME]/lecture_notes/examples", "--type", "examples"
             ],                
             "group": "build",
             "presentation": {
