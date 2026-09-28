@@ -98,7 +98,7 @@
         }        
         ,
         {
-            "label": "build and deploy public",
+            "label": "build and deploy docs",
             "type": "shell",                        
             "group": "build",
             "presentation": {
@@ -107,7 +107,7 @@
                 "panel": "dedicated"
             },   
             "dependsOrder": "sequence",
-            "dependsOn": ["build all","deploy public"]
+            "dependsOn": ["build all","deploy docs"]
 
         },
         {
