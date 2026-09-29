@@ -20,7 +20,7 @@ Lernziele:
 
 ifdef::backend-revealjs[]
 :imagesdir-old: {imagesdir}
-:imagesdir: intro/img
+:imagesdir: organisation/img
 === Advance Organizer: die Themen im Überblick
 .Advance Organizer: die Themen im Überblick
 image::advance_organizer.png[width=100%, scaledwidth=100%, align=center]
