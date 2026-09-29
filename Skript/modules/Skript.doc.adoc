@@ -1,11 +1,5 @@
 = TITEL
-// ########################################################
-:author: Prof. Dr. Michael Munz
-:revnumber: 1.0
-:revdate: {localdate} | {githash}
-:lecturetitle: TITEL
-:lang: de
-// ########################################################
+include::_includes/variables_lecture.asciidoc[]
 include::_includes/_variables_doc.asciidoc[]
 
 [IMPORTANT]

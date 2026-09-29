@@ -1,0 +1,19 @@
+ifeval::["{lang}" == "de"]
+
+[.notes]
+--
+====
+**Beispiele:** link:examples/{chapter_name}_examples.zip[{chapter_name}_examples.zip, {window=_blank]
+====
+--
+endif::[]
+
+ifeval::["{lang}" == "en"]
+[.notes]
+--
+====
+**Examples:** link:examples/{chapter_name}_examples.zip[{chapter_name}_examples.zip, {window=_blank]
+====
+--
+
+endif::[]

@@ -1,0 +1,15 @@
+= CHAPTER_NAME
+include::_includes/variables_lecture.asciidoc[]
+include::_includes/_variables_slides.asciidoc[]
+
+[.text-center]
+{lecturetitle} +
+Version {revnumber} ({revdate})
+
+
+include::aboutme/aboutme.adoc[]
+include::chapter_xy/chapter_xy.adoc[]
+
+include::_includes/_lastslide.asciidoc[]
+
+

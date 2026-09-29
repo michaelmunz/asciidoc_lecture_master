@@ -1,0 +1,21 @@
+ifeval::["{lang}" == "de"]
+ifdef::backend-revealjs[]
+:imagesdir-old: {imagesdir}
+:imagesdir: organisatorisches/img
+=== Advance Organizer: die Themen im Überblick
+.Advance Organizer: die Themen im Überblick
+image::advance_organizer.png[width=100%, scaledwidth=100%, align=center]
+:imagesdir: {imagesdir-old}
+endif::[]
+endif::[]
+
+ifeval::["{lang}" == "en"]
+ifdef::backend-revealjs[]
+:imagesdir-old: {imagesdir}
+:imagesdir: organisation/img
+=== Advance Organizer: Overview of the topics of this course
+.Advance Organizer: Overview of the topics of this course
+image::advance_organizer.png[width=100%, scaledwidth=100%, align=center]
+:imagesdir: {imagesdir-old}
+endif::[]
+endif::[]

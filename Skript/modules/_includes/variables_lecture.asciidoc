@@ -1,0 +1,5 @@
+:author: Prof. Dr. Michael Munz
+:revnumber: 1.1
+:revdate: {localdate} | {githash}
+:lecturetitle: Image Analysis and Machine Learning
+:lang: en
