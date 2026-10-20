@@ -32,7 +32,7 @@ def copyfile_ssh(src_file: str, dest_file: str):
 
 def deploy_docs(base_dir: str, dest_dir: str):
     if dest_dir is None or len(dest_dir) == 0:
-        raise ValueError("No destination directory given")
+        raise ValueError("No destination directory given")    
         
     base_dir = os.path.abspath(base_dir)    
         
@@ -111,7 +111,11 @@ if __name__ == "__main__":
         print("Deploying documentation...")                
         # iterate over all subdirectores in the base dir and deploy the html and pdf files to the destination directory
         for docs_dir in os.listdir(base_dir):            
-            deploy_docs(os.path.join(base_dir, docs_dir), dest_dir)
+            if os.path.isdir(os.path.join(base_dir, docs_dir)):
+                print(f"Deploying {docs_dir}...")
+                deploy_docs(os.path.join(base_dir, docs_dir), dest_dir)
+            else:
+                print(f"Skipping {docs_dir} as it is not a directory.")
         
 
     elif type == "examples":
