@@ -202,32 +202,16 @@ caption.title {
 }
 
 /* =========================================================
-   Bereits gezeigte Fragmente abdunkeln, damit der Blick
-   automatisch auf das gerade aktive Fragment fällt, statt dass
-   alle Schritte gleich kräftig konkurrieren.
+   Trennfolien: Sections, die nur eine Überschrift enthalten.
+   Ein .slide-content-Wrapper ist erlaubt, solange er nur
+   Speaker-Notes (aside.notes) enthält.
    ========================================================= */
 
-.reveal .fragment.visible:not(.current-fragment) {
-  opacity: 0.45;
-}
-
-/* =========================================================
-   Trennfolien: Sections, deren einziges Kind eine Überschrift
-   ist (== Kapitel gefolgt direkt von === Unterfolien), werden
-   automatisch erkannt - kein manuelles Markup im AsciiDoc nötig.
-   Wichtig: "display" wird bewusst NICHT angefasst, das steuert
-   reveal.js selbst dynamisch (Sichtbarkeit der aktuellen Folie).
-   ========================================================= */
-
-.reveal section:has(> h1:only-child),
-.reveal section:has(> h2:only-child),
-.reveal section:has(> h3:only-child) {
+.reveal .slides section:has(> :is(h1, h2, h3)):not(:has(> :not(h1, h2, h3, .slide-content))):not(:has(> .slide-content > :not(aside.notes))) {
   background-color: var(--ink) !important;
 }
 
-.reveal section:has(> h1:only-child) h1,
-.reveal section:has(> h2:only-child) h2,
-.reveal section:has(> h3:only-child) h3 {
+.reveal .slides section:has(> :is(h1, h2, h3)):not(:has(> :not(h1, h2, h3, .slide-content))):not(:has(> .slide-content > :not(aside.notes))) > :is(h1, h2, h3) {
   color: #fff;
   border-bottom: none;
   text-align: center;
